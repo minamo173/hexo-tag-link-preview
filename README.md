@@ -33,5 +33,8 @@ it generates HTML:
 </a>
 ```
 
+### See also
++ [Above example HTML with CSS on CodePen](https://codepen.io/minamo173/pen/OQKJWX)
+
 ## License
 MIT
