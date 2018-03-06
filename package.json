@@ -1,7 +1,7 @@
 {
   "name": "hexo-tag-link-preview",
   "version": "1.0.0",
-  "description": "generate a link preview for a given URL.",
+  "description": "Embed a link preview on your Hexo article.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
