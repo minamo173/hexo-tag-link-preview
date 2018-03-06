@@ -4,7 +4,7 @@
 * Copyright (c) 2018, minamo
 * Licensed under the MIT license.
 * Syntax:
-* {% linkPreview https://www.amazon.com/ %} %}
+* {% linkPreview https://www.amazon.com/ %}
 **/
 
 'use strict';
