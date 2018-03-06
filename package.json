@@ -1,0 +1,24 @@
+{
+  "name": "hexo-tag-link-preview",
+  "version": "1.0.0",
+  "description": "generate a link preview for a given URL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-minamo173:minamo173/hexo-tag-link-preview.git"
+  },
+  "keywords": [
+    "hexo",
+    "tag",
+    "link",
+    "ogp"
+  ],
+  "author": "minamo <minamo173dev@gmail.com> (https://minamo173.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "open-graph-scraper": "^3.1.5"
+  }
+}
