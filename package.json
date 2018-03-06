@@ -19,6 +19,7 @@
   "author": "minamo <minamo173dev@gmail.com> (https://minamo173.com/)",
   "license": "MIT",
   "dependencies": {
+    "hexo-util": "^0.6.3",
     "open-graph-scraper": "^3.1.5"
   }
 }
