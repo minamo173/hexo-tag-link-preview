@@ -1,5 +1,5 @@
 # hexo-tag-link-preview
-generate a link preview from url on your [Hexo](https://hexo.io/) article.
+Embed a link preview on your [Hexo](https://hexo.io/) article.
 
 ## Installation
 
