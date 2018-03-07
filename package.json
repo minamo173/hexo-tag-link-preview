@@ -1,6 +1,6 @@
 {
   "name": "hexo-tag-link-preview",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Embed a link preview on your Hexo article.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com-minamo173:minamo173/hexo-tag-link-preview.git"
+    "url": "git@github.com:minamo173/hexo-tag-link-preview.git"
+  },
+  "bugs": {
+    "url": "https://github.com/minamo173/hexo-tag-link-preview/issues",
+    "email": "minamo173dev@gmail.com"
   },
   "keywords": [
     "hexo",
