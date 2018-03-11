@@ -12,6 +12,8 @@ const util = require('hexo-util');
 const ogs = require('open-graph-scraper');
 const descriptionLength = (hexo.config.linkPreview && hexo.config.linkPreview.length)
                             ? hexo.config.linkPreview.length : 140;
+const className = (hexo.config.linkPreview && hexo.config.linkPreview.className)
+                    ? hexo.config.linkPreview.className : 'link-preview';
 
 hexo.extend.tag.register('linkPreview', function(args) {
   return getTag({url: args[0]}).then(tag => {
@@ -41,7 +43,7 @@ async function getTag(options) {
       descriptions = util.htmlTag('div', { class: 'descriptions' }, descriptions);
 
       const tag = util.htmlTag('div', { class: 'link-area' },  image + descriptions);
-      return util.htmlTag('a', { href: options.url, class: 'link-preview' }, tag);
+      return util.htmlTag('a', { href: options.url, class: className }, tag);
     })
     .catch(function (error) {
       console.log('error:', error);
