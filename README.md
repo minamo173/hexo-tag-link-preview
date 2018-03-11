@@ -53,7 +53,7 @@ You can provide top-level class name of this preview link HTML.
 You can provide number of character in og-description.  
 (Default: `140`)
 
-### Example
+### Example
 
 _config.yml:
 
