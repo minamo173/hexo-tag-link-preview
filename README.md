@@ -28,7 +28,7 @@ Example:
 it generates HTML:
 
 ```html
-<a href="https://www.amazon.com" class="link-preview" target="_blank" rel="noopener">
+<a href="https://www.amazon.com" class="link-preview">
   <div class="link-area">
     <div class="og-image">
       <img src="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png">
@@ -43,6 +43,41 @@ it generates HTML:
 
 ### See also
 + [Above example HTML with CSS on CodePen](https://codepen.io/minamo173/pen/OQKJWX)
+
+## Options
+### className
+You can provide top-level class name of this preview link HTML.  
+(Default: `link-preview`)
+
+### length
+You can provide number of character in og-description.  
+(Default: `140`)
+
+### Example
+
+_config.yml:
+
+```yaml
+linkPreview:
+  className: sample
+  length: 6
+```
+
+it generates:
+
+```html
+<a href="https://www.amazon.com" class="sample">
+  <div class="link-area">
+    <div class="og-image">
+      <img src="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png">
+    </div>
+    <div class="descriptions">
+      <div class="og-title">Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more</div>
+      <div class="og-description">Online</div>
+    </div>
+  </div>
+</a>
+```
 
 ## License
 MIT
