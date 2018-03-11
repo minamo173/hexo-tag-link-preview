@@ -1,7 +1,7 @@
 # hexo-tag-link-preview
 Embed a link preview on your [Hexo](https://hexo.io/) article.
 
-[![NPM](https://nodei.co/npm/hexo-tag-link-preview.png)](https://nodei.co/npm/hexo-tag-link-preview.js/)
+[![NPM](https://nodei.co/npm/hexo-tag-link-preview.png)](https://nodei.co/npm/hexo-tag-link-preview/)
 
 [![npm](https://img.shields.io/npm/l/hexo-tag-link-preview.svg?style=flat-square)](LICENSE) 
 [![npm](https://img.shields.io/npm/dt/hexo-tag-link-preview.svg?style=flat-square)](https://www.npmjs.com/package/hexo-tag-link-preview)
