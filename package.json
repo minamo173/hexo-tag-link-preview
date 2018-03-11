@@ -16,8 +16,12 @@
   },
   "keywords": [
     "hexo",
+    "helper",
+    "plugin",
     "tag",
     "link",
+    "preview",
+    "image",
     "ogp"
   ],
   "author": "minamo <minamo173dev@gmail.com> (https://minamo173.com/)",
