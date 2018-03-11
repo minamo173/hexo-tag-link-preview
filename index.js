@@ -10,6 +10,8 @@
 'use strict';
 const util = require('hexo-util');
 const ogs = require('open-graph-scraper');
+const descriptionLength = (hexo.config.linkPreview && hexo.config.linkPreview.length)
+                            ? hexo.config.linkPreview.length : 140;
 
 hexo.extend.tag.register('linkPreview', function(args) {
   return getTag({url: args[0]}).then(tag => {
@@ -32,7 +34,8 @@ async function getTag(options) {
       descriptions += util.htmlTag('div', { class: 'og-title' }, ogp.ogTitle);
 
       if (ogp.hasOwnProperty('ogDescription')) {
-        descriptions += util.htmlTag('div', { class: 'og-description' }, ogp.ogDescription);
+        const description = adjustLength(ogp.ogDescription);
+        descriptions += util.htmlTag('div', { class: 'og-description' }, description);
       }
 
       descriptions = util.htmlTag('div', { class: 'descriptions' }, descriptions);
@@ -44,4 +47,11 @@ async function getTag(options) {
       console.log('error:', error);
       return '';
   });
+}
+
+function adjustLength(description) {
+  if (description && description.length > descriptionLength) {
+    description = description.slice(0, descriptionLength) + '…';
+  }
+  return description;
 }
