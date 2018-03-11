@@ -10,8 +10,8 @@
 'use strict';
 const util = require('hexo-util');
 const ogs = require('open-graph-scraper');
-const descriptionLength = (hexo.config.linkPreview && hexo.config.linkPreview.length)
-                            ? hexo.config.linkPreview.length : 140;
+const descriptionLength = (hexo.config.linkPreview && hexo.config.linkPreview.descriptionLength)
+                            ? hexo.config.linkPreview.descriptionLength : 140;
 const className = (hexo.config.linkPreview && hexo.config.linkPreview.className)
                     ? hexo.config.linkPreview.className : 'link-preview';
 
