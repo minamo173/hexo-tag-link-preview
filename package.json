@@ -29,5 +29,10 @@
   "dependencies": {
     "hexo-util": "^0.6.3",
     "open-graph-scraper": "^3.1.5"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "cheerio": "^1.0.0-rc.2",
+    "mocha": "^5.1.1"
   }
 }
