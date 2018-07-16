@@ -15,7 +15,9 @@ const descriptionLength = (hexo.config.linkPreview && hexo.config.linkPreview.de
 const className = (hexo.config.linkPreview && hexo.config.linkPreview.className)
                     ? hexo.config.linkPreview.className : 'link-preview';
 
-const config = {
+let config = {
+  image: true,
+  description: true,
   descriptionLength: descriptionLength,
   className: className
 }
