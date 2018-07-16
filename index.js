@@ -24,7 +24,7 @@ let config = {
 
 hexo.extend.tag.register('linkPreview', function(args) {
   const options = args[1];
-  mergeConfig(config, options);
+  config = mergeConfig(config, options);
   return linkPreview.getTag(args[0], config).then(tag => {
     return tag;
   });
@@ -36,4 +36,5 @@ function mergeConfig(config, options) {
       config[key] = options[key];
     }
   }
+  return config;
 }
