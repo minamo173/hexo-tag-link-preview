@@ -2,8 +2,8 @@ const util = require('hexo-util');
 const ogs = require('open-graph-scraper');
 
 const linkPreview = {
-  getTag: async function (options, config) {
-    return ogs(options)
+  getTag: async function (url, config) {
+    return ogs({ url: url })
       .then(function (result) {
         const ogp = result.data;
         let image = '';
@@ -30,7 +30,7 @@ const linkPreview = {
 
         const tag = util.htmlTag('div', { class: 'link-area' },  image + descriptions);
         
-        return util.htmlTag('a', { href: options.url, class: config.className, target: options.target, rel: options.rel }, tag);
+        return util.htmlTag('a', { href: url, class: config.className, target: config.target, rel: config.rel }, tag);
       })
       .catch(function (error) {
         console.log('error:', error);
