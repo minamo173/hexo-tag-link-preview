@@ -20,7 +20,7 @@ const linkPreview = {
           const description = ogp.ogDescription;
 
           if (description && description.length > config.descriptionLength) {
-            description = description.slice(0, descriptionLength) + '…';
+            description = description.slice(0, config.descriptionLength) + '…';
           }
 
           descriptions += util.htmlTag('div', { class: 'og-description' }, description);
