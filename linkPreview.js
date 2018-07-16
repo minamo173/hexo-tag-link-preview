@@ -9,14 +9,14 @@ const linkPreview = {
         let image = '';
         let descriptions = '';
 
-        if (ogp.hasOwnProperty('ogImage')) {
+        if (config.image && ogp.hasOwnProperty('ogImage')) {
           image += util.htmlTag('img', { src: ogp.ogImage.url } , '');
           image = util.htmlTag('div', { class: 'og-image'}, image);
         }
 
         descriptions += util.htmlTag('div', { class: 'og-title' }, ogp.ogTitle);
 
-        if (ogp.hasOwnProperty('ogDescription')) {
+        if (config.description && ogp.hasOwnProperty('ogDescription')) {
           const description = ogp.ogDescription;
 
           if (description && description.length > config.descriptionLength) {
