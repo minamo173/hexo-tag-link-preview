@@ -21,7 +21,17 @@ const config = {
 }
 
 hexo.extend.tag.register('linkPreview', function(args) {
-  return linkPreview.getTag({url: args[0], target: args[1], rel: args[2]}, config).then(tag => {
+  const options = args[1];
+  mergeConfig(config, options);
+  return linkPreview.getTag(args[0], config).then(tag => {
     return tag;
   });
 }, {async: true});
+
+function mergeConfig(config, options) {
+  for (const key in options) {
+    if (options.hasOwnProperty(key)) {
+      config[key] = options[key];
+    }
+  }
+}
