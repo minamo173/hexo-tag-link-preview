@@ -9,6 +9,7 @@ const linkPreview = {
         let image = '';
         let descriptions = '';
 
+        // Image
         if (config.image && ogp.hasOwnProperty('ogImage')) {
           image += util.htmlTag('img', { src: ogp.ogImage.url } , '');
           image = util.htmlTag('div', { class: 'og-image'}, image);
@@ -16,6 +17,7 @@ const linkPreview = {
 
         descriptions += util.htmlTag('div', { class: 'og-title' }, ogp.ogTitle);
 
+        // Description
         if (config.description && ogp.hasOwnProperty('ogDescription')) {
           const description = ogp.ogDescription;
 
