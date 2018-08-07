@@ -19,7 +19,8 @@ let config = {
   image: true,
   description: true,
   descriptionLength: descriptionLength,
-  className: className
+  className: className,
+  timeout: 4000
 }
 
 hexo.extend.tag.register('linkPreview', function(args) {

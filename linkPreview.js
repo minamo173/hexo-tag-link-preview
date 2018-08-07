@@ -3,7 +3,7 @@ const ogs = require('open-graph-scraper');
 
 const linkPreview = {
   getTag: async function (url, config) {
-    return ogs({ url: url })
+    return ogs({ url: url, timeout: config.timeout })
       .then(function (result) {
         const ogp = result.data;
         let image = '';
