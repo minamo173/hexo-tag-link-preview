@@ -33,11 +33,11 @@ async function getTag(options) {
         image = util.htmlTag('div', { class: 'og-image'}, image)
       }
 
-      descriptions += util.htmlTag('div', { class: 'og-title' }, ogp.ogTitle);
+      descriptions += util.htmlTag('div', { class: 'og-title' }, escapeHTML(ogp.ogTitle));
 
       if (ogp.hasOwnProperty('ogDescription')) {
         const description = adjustLength(ogp.ogDescription);
-        descriptions += util.htmlTag('div', { class: 'og-description' }, description);
+        descriptions += util.htmlTag('div', { class: 'og-description' }, escapeHTML(description));
       }
 
       descriptions = util.htmlTag('div', { class: 'descriptions' }, descriptions);
@@ -56,4 +56,13 @@ function adjustLength(description) {
     description = description.slice(0, descriptionLength) + '…';
   }
   return description;
+}
+
+function escapeHTML(str) {
+  return str
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
 }
