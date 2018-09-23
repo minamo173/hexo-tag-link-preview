@@ -10,6 +10,7 @@
 'use strict';
 const util = require('hexo-util');
 const ogs = require('open-graph-scraper');
+const escapeHTML = require('escape-html');
 const descriptionLength = (hexo.config.linkPreview && hexo.config.linkPreview.descriptionLength)
                             ? hexo.config.linkPreview.descriptionLength : 140;
 const className = (hexo.config.linkPreview && hexo.config.linkPreview.className)
@@ -56,13 +57,4 @@ function adjustLength(description) {
     description = description.slice(0, descriptionLength) + '…';
   }
   return description;
-}
-
-function escapeHTML(str) {
-  return str
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#39;');
 }
