@@ -7,13 +7,13 @@
 * {% linkPreview https://www.amazon.com/ %}
 **/
 
-'use strict';
+'use strict'
 const linkPreview = require('./linkPreview.js')
 
 const descriptionLength = (hexo.config.linkPreview && hexo.config.linkPreview.descriptionLength)
-                            ? hexo.config.linkPreview.descriptionLength : 140;
+  ? hexo.config.linkPreview.descriptionLength : 140
 const className = (hexo.config.linkPreview && hexo.config.linkPreview.className)
-                    ? hexo.config.linkPreview.className : 'link-preview';
+  ? hexo.config.linkPreview.className : 'link-preview'
 
 let config = {
   image: true,
@@ -24,18 +24,18 @@ let config = {
 }
 
 hexo.extend.tag.register('linkPreview', function(args) {
-  const options = args[1];
-  config = mergeConfig(config, options);
+  const options = args[1]
+  config = mergeConfig(config, options)
   return linkPreview.getTag(args[0], config).then(tag => {
-    return tag;
-  });
-}, {async: true});
+    return tag
+  })
+}, { async: true })
 
 function mergeConfig(config, options) {
   for (const key in options) {
     if (options.hasOwnProperty(key)) {
-      config[key] = options[key];
+      config[key] = options[key]
     }
   }
-  return config;
+  return config
 }
