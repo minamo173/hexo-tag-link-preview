@@ -1,5 +1,6 @@
 const util = require('hexo-util');
 const ogs = require('open-graph-scraper');
+const escapeHTML = require('escape-html');
 
 const linkPreview = {
   getTag: async function (url, config) {
@@ -15,7 +16,7 @@ const linkPreview = {
           image = util.htmlTag('div', { class: 'og-image'}, image);
         }
 
-        descriptions += util.htmlTag('div', { class: 'og-title' }, ogp.ogTitle);
+        descriptions += util.htmlTag('div', { class: 'og-title' }, escapeHTML(ogp.ogTitle));
 
         // Description
         if (config.description && ogp.hasOwnProperty('ogDescription')) {
@@ -25,7 +26,7 @@ const linkPreview = {
             description = description.slice(0, config.descriptionLength) + '…';
           }
 
-          descriptions += util.htmlTag('div', { class: 'og-description' }, description);
+          descriptions += util.htmlTag('div', { class: 'og-description' }, escapeHTML(description));
         }
 
         descriptions = util.htmlTag('div', { class: 'descriptions' }, descriptions);
