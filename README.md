@@ -61,8 +61,6 @@ Output:
 <a href="https://www.amazon.com" class="link-preview" target="_self" rel="nofollow">
 ```
 
-
-
 ### See also
 + [Above example HTML with CSS on CodePen](https://codepen.io/minamo173/pen/OQKJWX)
 
@@ -100,6 +98,13 @@ it generates:
   </div>
 </a>
 ```
+
+## upgrade 1.x to 2.x
+### 1.x
+{% linkPreview https://www.amazon.com/ _blank nofollow %}
+
+### 2.x
+{% linkPreview https://www.amazon.com/ target:_blank rel:nofollow %}
 
 ## License
 MIT
