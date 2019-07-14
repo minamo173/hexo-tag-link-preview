@@ -1,6 +1,6 @@
 {
   "name": "hexo-tag-link-preview",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Embed a link preview on your Hexo article.",
   "main": "index.js",
   "scripts": {
