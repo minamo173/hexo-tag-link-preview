@@ -29,7 +29,7 @@ async function getTag(options) {
       let image = '';
       let descriptions = '';
 
-      if (ogp.hasOwnProperty('ogImage')) {
+      if (ogp.hasOwnProperty('ogImage') && ogp.ogImage.url) {
         image += util.htmlTag('img', { src: ogp.ogImage.url } , '');
         image = util.htmlTag('div', { class: 'og-image'}, image)
       }
