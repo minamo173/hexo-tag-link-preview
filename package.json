@@ -29,6 +29,6 @@
   "dependencies": {
     "escape-html": "^1.0.3",
     "hexo-util": "^0.6.3",
-    "open-graph-scraper": "^3.1.5"
+    "open-graph-scraper": "^3.6.2"
   }
 }
