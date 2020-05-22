@@ -30,5 +30,9 @@
     "escape-html": "^1.0.3",
     "hexo-util": "^2.1.0",
     "open-graph-scraper": "^3.6.2"
+  },
+  "devDependencies": {
+    "hexo": "^4.2.1",
+    "jest": "^26.0.1"
   }
 }

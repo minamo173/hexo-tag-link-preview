@@ -6,7 +6,6 @@ Embed a link preview on your [Hexo](https://hexo.io/) article.
 [![npm](https://img.shields.io/npm/l/hexo-tag-link-preview.svg?style=flat-square)](LICENSE)
 [![npm](https://img.shields.io/npm/dt/hexo-tag-link-preview.svg?style=flat-square)](https://www.npmjs.com/package/hexo-tag-link-preview)
 [![hexo](https://img.shields.io/badge/Hexo-%3E%3D3.0-blue.svg?style=flat-square)](https://hexo.io)
-[![Dependency Status](https://gemnasium.com/badges/github.com/minamo173/hexo-tag-link-preview.svg)](https://gemnasium.com/github.com/minamo173/hexo-tag-link-preview)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
 ## Installation
