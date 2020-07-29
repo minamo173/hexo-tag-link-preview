@@ -32,7 +32,7 @@
     "open-graph-scraper": "^3.6.2"
   },
   "devDependencies": {
-    "hexo": "^4.2.1",
+    "hexo": "^5.0.0",
     "jest": "^26.0.1"
   }
 }
