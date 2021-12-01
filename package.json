@@ -28,7 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "escape-html": "^1.0.3",
-    "hexo-util": "^2.1.0",
+    "hexo-util": "^2.5.0",
     "open-graph-scraper": "^4.11.0"
   },
   "devDependencies": {
