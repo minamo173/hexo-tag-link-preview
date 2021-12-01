@@ -19,7 +19,7 @@ beforeAll(async() => {
   });
 });
 
-test('get link preview from https://ogp.me/', () => {
+test('get link preview from https://ogp.me/', async() => {
   expect(result).toBe(
     '<a href="https://ogp.me/" target="_blank" rel="nofollow"><div class="link-area"><div class="og-image"><img src="https://ogp.me/logo.png"></img></div><div class="descriptions"><div class="og-title">Open Graph protocol</div><div class="og-description">The Op…</div></div></div></a>'
   );
