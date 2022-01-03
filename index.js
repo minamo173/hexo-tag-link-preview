@@ -17,7 +17,13 @@ hexo.config.linkPreview = Object.assign({
 }, config.linkPreview);
 
 hexo.extend.tag.register('linkPreview', function(args) {
-  return getTag({url: args[0], target: args[1], rel: args[2]}).then(tag => {
+  return getTag({
+    url: args[0],
+    target: args[1],
+    rel: args[2],
+    descriptionLength: config.linkPreview.descriptionLength,
+    className: config.linkPreview.className,
+  }).then(tag => {
     return tag;
   });
 }, {async: true});
