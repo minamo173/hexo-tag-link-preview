@@ -9,11 +9,12 @@
 
 'use strict';
 const getTag = require('./lib/generator');
+const { config } = hexo;
 
 hexo.config.linkPreview = Object.assign({
-  descriptionLength: typeof hexo.config.linkPreview === 'undefined' ? 140 : hexo.config.linkPreview.descriptionLength,
-  className: typeof hexo.config.linkPreview.className === 'undefined' ? 'link-preview' : hexo.config.linkPreview.className,
-}, hexo.config.linkPreview);
+  descriptionLength: typeof config.linkPreview === 'undefined' ? 140 : config.linkPreview.descriptionLength,
+  className: typeof config.linkPreview.className === 'undefined' ? 'link-preview' : config.linkPreview.className,
+}, config.linkPreview);
 
 hexo.extend.tag.register('linkPreview', function(args) {
   return getTag({url: args[0], target: args[1], rel: args[2]}).then(tag => {
