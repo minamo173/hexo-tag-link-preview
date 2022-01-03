@@ -11,7 +11,7 @@
 const getTag = require('./lib/generator');
 
 hexo.config.linkPreview = Object.assign({
-  descriptionLength: typeof hexo.config.linkPreview === 'undefined' ? 140 : hexo.config.linkPreview.descriptionLengt,
+  descriptionLength: typeof hexo.config.linkPreview === 'undefined' ? 140 : hexo.config.linkPreview.descriptionLength,
   className: typeof hexo.config.linkPreview.className === 'undefined' ? 'link-preview' : hexo.config.linkPreview.className,
 }, hexo.config.linkPreview);
 
