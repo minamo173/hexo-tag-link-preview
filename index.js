@@ -12,8 +12,8 @@ const getTag = require('./lib/generator');
 const { config } = hexo;
 
 hexo.config.linkPreview = Object.assign({
-  descriptionLength: typeof config.linkPreview === 'undefined' ? 140 : config.linkPreview.descriptionLength,
-  className: typeof config.linkPreview.className === 'undefined' ? 'link-preview' : config.linkPreview.className,
+  descriptionLength: hasDescriptionLength() ? config.linkPreview.descriptionLength : 140,
+  className: hasClassName() ? config.linkPreview.className : 'link-preview',
 }, config.linkPreview);
 
 hexo.extend.tag.register('linkPreview', function(args) {
@@ -27,3 +27,11 @@ hexo.extend.tag.register('linkPreview', function(args) {
     return tag;
   });
 }, {async: true});
+
+function hasDescriptionLength() {
+  return config.linkPreview && config.linkPreview.descriptionLength;
+}
+
+function hasClassName() {
+  return config.linkPreview && config.linkPreview.className;
+}
