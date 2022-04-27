@@ -33,6 +33,6 @@
   },
   "devDependencies": {
     "hexo": "^6.0.0",
-    "jest": "^27.4.2"
+    "jest": "^28.0.1"
   }
 }
